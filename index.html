@@ -21,7 +21,26 @@
   </head>
   <body>
     <!-- Section 1 — Hero -->
-    <section class="hero" id="home"><!-- hero content --></section>
+    <section class="hero" id="home">
+      <!-- Background video (decorative, never captures clicks) -->
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260823_050407_500d0339-ab28-41c1-9688-132a74a3b5aa.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <!-- Desktop scrim: fades the video out behind the headline -->
+      <div class="hero__scrim" aria-hidden="true"></div>
+    </section>
 
     <!-- Section 2 — About -->
     <section class="about" id="about"><!-- about content --></section>
