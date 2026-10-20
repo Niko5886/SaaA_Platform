@@ -37,4 +37,29 @@
 
   document.addEventListener("click", onFirstInteraction);
   document.addEventListener("touchstart", onFirstInteraction, { passive: true });
+
+  /* ----------------------------------------------------------
+     Mobile menu toggle (hamburger)
+     ---------------------------------------------------------- */
+  var burger = document.querySelector(".nav__burger");
+  var menu = document.querySelector(".nav__menu");
+
+  function setMenu(open) {
+    menu.classList.toggle("is-open", open);
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+
+  if (burger && menu) {
+    burger.addEventListener("click", function () {
+      setMenu(!menu.classList.contains("is-open"));
+    });
+
+    // Tapping a link closes the menu
+    menu.addEventListener("click", function (event) {
+      if (event.target.closest("a")) {
+        setMenu(false);
+      }
+    });
+  }
 })();
