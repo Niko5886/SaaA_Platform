@@ -40,6 +40,76 @@
 
       <!-- Desktop scrim: fades the video out behind the headline -->
       <div class="hero__scrim" aria-hidden="true"></div>
+
+      <!-- Navbar -->
+      <header class="nav">
+        <a class="nav__brand" href="#home" aria-label="Targo home">
+          <span class="nav__logo" aria-hidden="true">
+            <svg width="38" height="38" viewBox="0 0 38 38">
+              <circle cx="19" cy="19" r="19" fill="#111" />
+              <ellipse
+                cx="19"
+                cy="19"
+                rx="10"
+                ry="4"
+                fill="#fff"
+                transform="rotate(-25 19 19)"
+              />
+            </svg>
+          </span>
+          <span class="nav__brandname">targo</span>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact us</a>
+        </nav>
+
+        <a class="nav__contact" href="#contact">
+          <svg
+            class="nav__mail"
+            width="17"
+            height="13"
+            viewBox="0 0 17 13"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="0.7"
+              y="0.7"
+              width="15.6"
+              height="11.6"
+              rx="1"
+              stroke="currentColor"
+              stroke-width="1.4"
+            />
+            <path
+              d="M1 1.8 L8.5 7 L16 1.8"
+              stroke="currentColor"
+              stroke-width="1.4"
+            />
+          </svg>
+          Contact us
+        </a>
+
+        <button
+          class="nav__burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </header>
+
+      <!-- Mobile stacked menu (toggled by the hamburger) -->
+      <nav class="nav__menu" id="mobile-menu" aria-label="Mobile">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact us</a>
+      </nav>
     </section>
 
     <!-- Section 2 — About -->
