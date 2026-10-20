@@ -117,3 +117,107 @@ button {
     rgba(242, 241, 240, 0) 100%
   );
 }
+
+/* ---- Navbar ---- */
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(20px, 5vw, 56px);
+  padding: clamp(20px, 3vw, 38px) clamp(20px, 4vw, 48px) 0;
+}
+
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__logo {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+}
+
+.nav__brandname {
+  font-size: clamp(22px, 5vw, 30px);
+  font-weight: 400;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
+.nav__brand:hover .nav__brandname {
+  color: #111;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav__links a {
+  font-weight: 700;
+  font-size: clamp(12px, 2.4vw, 15px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--nav-link);
+  white-space: nowrap;
+}
+
+/* Right-aligned contact button (desktop) */
+.nav__contact {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  padding: 14px 26px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% 100%,
+    12px 100%,
+    0 calc(100% - 12px)
+  );
+  transition: background 0.18s ease;
+}
+
+.nav__contact:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.nav__mail {
+  color: #fff;
+}
+
+/* Hamburger + mobile menu are hidden on desktop */
+.nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  padding: 6px;
+}
+
+.nav__burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+}
+
+.nav__menu {
+  display: none;
+}
