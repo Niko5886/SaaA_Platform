@@ -1,0 +1,75 @@
+/* ============================================================
+   Targo — global tokens, reset and base typography
+   ============================================================ */
+
+:root {
+  /* Accent */
+  --accent: #15bcdf;
+  --accent-hover: #3fd0ef;
+  --accent-border: #0fa3c2;
+
+  /* Surfaces */
+  --bg: #f2f1f0;
+
+  /* Text */
+  --heading: #2b3033;
+  --nav-link: #3a3a3a;
+  --body-gray: #6b6f72;
+  --ink: #1a1c1e;
+
+  /* Breakpoint reference */
+  --mobile: 700px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--body-gray);
+  font-family: "Quantico", "Arial Narrow", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* All headings: uppercase, tight tracking + leading */
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--heading);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.98;
+  font-weight: 700;
+}
+
+a {
+  color: var(--nav-link);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+a:hover {
+  color: #000;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
