@@ -244,3 +244,54 @@ button {
 .hero__line--accent {
   color: var(--accent);
 }
+
+/* ---- Chamfered accent button (shared: hero CTA + about CTA) ---- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--accent);
+  border: 1px solid var(--accent-border);
+  color: var(--ink);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 18px 34px;
+  font-size: clamp(13px, 2.2vw, 16px);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 16px) 0,
+    100% 16px,
+    100% 100%,
+    16px 100%,
+    0 calc(100% - 16px)
+  );
+  box-shadow: 0 0 0 1px rgba(21, 188, 223, 0.35),
+    0 10px 30px -12px rgba(15, 163, 194, 0.6);
+  transition: background 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Trailing 22×1px dark line */
+.btn::after {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--ink);
+  flex: 0 0 auto;
+}
+
+.btn:hover {
+  color: var(--ink);
+  background: var(--accent-hover);
+  box-shadow: 0 0 0 1px rgba(21, 188, 223, 0.5),
+    0 14px 40px -12px rgba(15, 163, 194, 0.85);
+}
+
+/* Hero CTA sits under the indented FOR / YOUR / BUSINESS lines */
+.hero__cta {
+  position: relative;
+  z-index: 2;
+  padding-left: calc(clamp(20px, 9vw, 118px) + min(238px, 28vw));
+  padding-bottom: min(clamp(36px, 6vw, 80px), 7vh);
+}
