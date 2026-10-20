@@ -128,7 +128,46 @@
     </section>
 
     <!-- Section 2 — About -->
-    <section class="about" id="about"><!-- about content --></section>
+    <section class="about" id="about">
+      <div class="about__left">
+        <h2 class="about__title">
+          <span class="about__line">About</span>
+          <span class="about__line about__line--indent about__line--accent">
+            Business
+          </span>
+        </h2>
+
+        <p class="about__text">
+          Targo builds the testing infrastructure modern teams rely on. From
+          automated pipelines to full-scale QA audits, we make sure your
+          software ships fast and breaks nothing. Hundreds of releases, zero
+          surprises.
+        </p>
+
+        <div class="about__cta">
+          <a class="btn" href="#">Learn more</a>
+        </div>
+      </div>
+
+      <div class="about__right">
+        <video
+          class="about__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260823_063501_2e2c8971-de1e-473a-8611-a0c9ae7ee186.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <!-- Cyan hue tint over the video -->
+        <div class="about__tint" aria-hidden="true"></div>
+      </div>
+    </section>
 
     <script src="js/main.js" defer></script>
   </body>
